@@ -1,6 +1,10 @@
-# Getting Started with Create React App
+# Pokedex app
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Things I could have done better
+- Include unit and integration tests
+- Add react toast to show errors/slow internet
 
 ## Available Scripts
 

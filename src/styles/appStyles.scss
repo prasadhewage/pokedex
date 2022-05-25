@@ -1,0 +1,16 @@
+// reset css in all browsers
+@import './reset';
+
+// load fonts
+@import './fonts';
+
+// common styles
+@import './common';
+
+// components
+@import './components/header';
+@import './components/pokedexCard';
+@import './components/loader';
+
+// pages
+@import './pages/listPokedex';

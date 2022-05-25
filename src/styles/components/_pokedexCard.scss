@@ -1,0 +1,37 @@
+.pokedex-card {
+    width: 20%;
+    padding: 0 15px;
+    margin: 0 8px 20px;
+
+    @media only screen and (max-width: 768px) {
+        width: 100%;
+        margin: 0 0 15px;
+    }
+
+    .card-image {
+        text-align: center;
+        background: #f2f2f2;
+        border-radius: 5px;
+        overflow: hidden;
+        min-height: 215px;
+    }
+
+    .card-details {
+        padding: 5px 10px 0;
+
+        .card-id {
+            display: block;
+            font-weight: 700;
+            color: #919191;
+            font-size: 0.9em;
+            margin-bottom: 12px;
+        }
+
+        .card-title {
+            font-weight: 600;
+            color: #313131;
+            font-size: 1.2em;
+            text-transform: capitalize;
+        }
+    }
+}

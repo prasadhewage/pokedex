@@ -1,26 +1,32 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
+import ListPokeDex from './containers/ListPokeDex'
+import PokeDexDetails from './containers/PokeDexDetails'
+import { Layout } from './components'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default function App() {
+    // Using HOC to wrap each page in a Layout
+    const withLayout = (Component: any) => (props: any) =>
+        (
+            <Layout>
+                {/* All props are passed through to the Component being wrapped */}
+                <Component {...props} />
+            </Layout>
+        )
+
+    // Pages
+    const PokeDexListPage = withLayout(() => <ListPokeDex />)
+    const PokeDexDetailsPage = withLayout(() => <PokeDexDetails />)
+    return (
+        <Router>
+            <div>
+                <Routes>
+                    <Route
+                        path="/pokedex/:slug"
+                        element={<PokeDexDetailsPage />}
+                    />
+                    <Route path="/" element={<PokeDexListPage />} />
+                </Routes>
+            </div>
+        </Router>
+    )
 }
-
-export default App;

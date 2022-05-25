@@ -1,0 +1,18 @@
+.pokedex-list-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+.load-pokedex-btn {
+    background-color: #30a7d7;
+    border: none;
+    color: white;
+    padding: 5px 22px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 1em;
+    text-transform: capitalize;
+    font-weight: 700;
+    margin: 15px auto;
+    cursor: pointer;
+}
